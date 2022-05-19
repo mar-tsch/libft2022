@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 16:59:51 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/18 18:37:10 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:28:07 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(ptr, 0, (nmemb * size));
 	return (ptr);
 }
-
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	void	*ptr;
-
-// 	ptr = malloc(nmemb * size);
-// 	if (!ptr)
-// 		return (NULL);
-// 	ft_bzero(ptr, nmemb);
-// 	return (ptr);
-// }
-

@@ -6,34 +6,34 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:51:15 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/18 15:03:00 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:19:22 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list  *new;
-    t_list  *newlst;
+	t_list	*new;
+	t_list	*newlst;
 
-    if (!lst || !f)
-        return (NULL);
-    new = ft_lstnew(f(lst->content));
-    if (!new)
-        return (NULL);
-    newlst = new;
-    lst = lst->next;
-    while (lst)
-    {
-        new = ft_lstnew(f(lst->content));
-        if (!new)
-        {
-            ft_lstclear(&newlst, del);
-            return (NULL);
-        }
-        ft_lstadd_back(&newlst, new);
-        lst = lst->next;
-    }
-    return (newlst);
+	if (!lst || !f)
+		return (NULL);
+	new = ft_lstnew(f(lst->content));
+	if (!new)
+		return (NULL);
+	newlst = new;
+	lst = lst->next;
+	while (lst)
+	{
+		new = ft_lstnew(f(lst->content));
+		if (!new)
+		{
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, new);
+		lst = lst->next;
+	}
+	return (newlst);
 }

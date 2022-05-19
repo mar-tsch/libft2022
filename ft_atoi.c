@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 15:13:06 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/13 12:03:00 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:31:54 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	while (str[x] >= '0' && str[x] <= '9')
 	{
 		total *= 10;
-		total +=  (str[x] - '0');
+		total += (str[x] - '0');
 		x++;
 	}
 	return (total * sign);

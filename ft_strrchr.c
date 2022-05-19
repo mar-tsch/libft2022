@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:28:48 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/13 15:35:24 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:58:55 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 		if (s[x] == (char)c)
 			return ((char *)&s[x]);
 		if (x == 0)
-			break;
+			break ;
 		x--;
 	}
 	return (0);

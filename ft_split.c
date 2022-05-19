@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:01:17 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/17 11:44:39 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:58:13 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static unsigned int	def_words(char const *s, char c)
 	{
 		if (*s++ == c)
 			continue ;
-        ++words;
+		++words;
 		while (*s && *s != c)
-            ++s;
+			++s;
 	}
 	return (words);
 }
@@ -35,25 +35,25 @@ static void	write_word(char *dst, char *start, char const *end)
 	*dst = '\0';
 }
 
-static char **alloc_tab(char const *s, char c)
+static char	**alloc_tab(char const *s, char c)
 {
-    if (!s)
-        return (NULL);
-    return ((char **)malloc(sizeof(char *) * (def_words(s, c) + 1)));
+	if (!s)
+		return (NULL);
+	return ((char **)malloc(sizeof(char *) * (def_words(s, c) + 1)));
 }
 
-static char **free_tab(char **tab)
+static char	**free_tab(char **tab)
 {
-    while (*tab)
-        free(*(tab++));
-    return (NULL);
+	while (*tab)
+		free(*(tab++));
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	unsigned int		x;
-	char	*start;
+	char			**tab;
+	char			*start;
+	unsigned int	x;
 
 	tab = alloc_tab(s, c);
 	if (!tab)

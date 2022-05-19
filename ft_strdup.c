@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:40:27 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/12 15:43:10 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:20:02 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	size_t		len;
-	char	*dup;
+	char		*dup;
 	size_t		x;
 
 	len = ft_strlen(s);
