@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:15:48 by mtritsch          #+#    #+#              #
-#    Updated: 2022/05/18 18:09:00 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/05/19 12:20:44 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,3 @@ bclean :
 	rm -f ${BONUSOBJS} 
 
 re : fclean all
-
-# so:
-# 	gcc -fPIC -Wall -Wextra -Werror ${SRCS}
-# 	gcc -shared -o libft.so ${OBJS}

@@ -1,2 +1,5 @@
 *.o
 *.a
+*.swp
+libftTester
+libft-war-machine
